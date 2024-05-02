@@ -46,7 +46,7 @@ router.put('/:id' , async (req , res)=>{
   try{
     const menuId = req.params.id;
     const updateMenuData = req.body;
-    const response = await Person.findByIdAndUpdate(personId , updateMenuData,{
+    const response = await MenuItem.findByIdAndUpdate(menuId , updateMenuData,{
       new : true,
       runValidators : true
     })
@@ -64,7 +64,7 @@ router.put('/:id' , async (req , res)=>{
 router.delete('/:id', async (req,res)=>{
   try {
     const menuId = req.params.id;
-    const response = await Person.findByIdAndDelete(menuId);
+    const response = await MenuItem.findByIdAndDelete(menuId);
     if(!response){
       return res.status(404).json({err : "ITEM NOT FOUND"})
     }
