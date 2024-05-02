@@ -4,7 +4,7 @@
   "description": "node.js , api , express , mongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Deepak Yadav",
